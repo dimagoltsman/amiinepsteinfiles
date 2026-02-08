@@ -154,7 +154,15 @@
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Noscript fallback for crawlers -->
+    <noscript>
+        <style>
+            .loading { display: none !important; }
+            .content-sections { display: block !important; }
+        </style>
+    </noscript>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -546,9 +554,13 @@
             display: none;
         }
 
+        .content-sections {
+            background: #0f0f0f;
+        }
+
         .content-section {
             padding: 3rem 0;
-            border-top: 1px solid #151515;
+            border-top: 1px solid #1a1a1a;
         }
 
         .content-section h2 {
