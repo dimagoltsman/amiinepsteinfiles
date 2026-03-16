@@ -1325,6 +1325,7 @@ function search() {
     const input = document.getElementById('nameInput');
     const name = input.value.trim();
     if (!name) { input.focus(); return; }
+    if (!/^[a-zA-Z\s\-'.]+$/.test(name)) { input.value = ''; input.placeholder = 'English names only...'; input.focus(); return; }
 
     document.getElementById('landing').classList.add('hidden');
     document.getElementById('contentSections').style.display = 'none';
