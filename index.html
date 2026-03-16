@@ -1034,7 +1034,7 @@ const RANDOM_NAMES = [
 let _seed = 0;
 
 function hashName(str) {
-    str = str.toLowerCase().trim();
+    str = str.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim().split(/\s+/).sort().join(' ');
     let h = 0;
     for (let i = 0; i < str.length; i++) {
         h = ((h << 5) - h + str.charCodeAt(i)) | 0;
